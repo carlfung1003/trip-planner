@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BKK · HKG · SYX — The Trip</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="sticky-nav">
+    <div class="nav-logo">THE TRIP</div>
+    <div class="nav-links">
+      <a href="#bangkok" class="nav-link" data-city="bangkok">BKK</a>
+      <a href="#hongkong" class="nav-link" data-city="hongkong">HKG</a>
+      <a href="#sanya" class="nav-link" data-city="sanya">SYX</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">April 2 — April 16 · 2026</p>
+      <h1 class="hero-title">
+        <span class="city-cycle">BANGKOK</span>
+        <span class="hero-sep">·</span>
+        <span class="hero-rest">HONG KONG · SANYA</span>
+      </h1>
+      <p class="hero-tagline">Three cities. One trip. No filler.</p>
+      <div class="hero-pills">
+        <a href="#bangkok" class="hero-pill" style="--ac:#F5A623">Bangkok</a>
+        <a href="#hongkong" class="hero-pill" style="--ac:#E8003D">Hong Kong</a>
+        <a href="#sanya" class="hero-pill" style="--ac:#00C9A7">Sanya</a>
+      </div>
+
+      <!-- COUNTDOWN -->
+      <div class="countdown-wrap">
+        <p class="countdown-label">DEPARTURE FROM SFO</p>
+        <div class="countdown" id="countdown">
+          <div class="cd-block">
+            <span class="cd-num" id="cd-days">--</span>
+            <span class="cd-unit">DAYS</span>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-block">
+            <span class="cd-num" id="cd-hours">--</span>
+            <span class="cd-unit">HRS</span>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-block">
+            <span class="cd-num" id="cd-mins">--</span>
+            <span class="cd-unit">MIN</span>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-block">
+            <span class="cd-num" id="cd-secs">--</span>
+            <span class="cd-unit">SEC</span>
+          </div>
+        </div>
+        <p class="countdown-sub">APR 02, 2026 · 22:50 · VN99 → VN601</p>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- CONFIRMED BOOKINGS STRIP -->
+  <section class="bookings-strip" id="bookings">
+    <div class="bookings-inner">
+      <h3 class="bookings-heading">CONFIRMED BOOKINGS</h3>
+      <div class="bookings-grid">
+
+        <!-- Flight 1: SFO → BKK -->
+        <div class="booking-card flight-card">
+          <div class="bk-airline">
+            <span class="bk-badge flight-badge">FLIGHT</span>
+            <span class="bk-carrier">Vietnam Airlines · VN99 / VN601</span>
+          </div>
+          <div class="bk-route">
+            <div class="bk-airport">
+              <span class="bk-iata">SFO</span>
+              <span class="bk-city">San Francisco</span>
+              <span class="bk-time">Apr 2 · 22:50</span>
+            </div>
+            <div class="bk-arrow">
+              <div class="bk-line"></div>
+              <span class="bk-plane">✈</span>
+              <div class="bk-stopover">via SGN</div>
+            </div>
+            <div class="bk-airport bk-airport--right">
+              <span class="bk-iata">BKK</span>
+              <span class="bk-city">Bangkok</span>
+              <span class="bk-time">Apr 4 · 10:20</span>
+            </div>
+          </div>
+          <div class="bk-meta">
+            <span class="bk-ref">Ref: E9RSQQ</span>
+            <span class="bk-pax">Carl + Rachel</span>
+          </div>
+        </div>
+
+        <!-- Hotel: Kimpton Bangkok -->
+        <div class="booking-card hotel-card">
+          <div class="bk-airline">
+            <span class="bk-badge hotel-badge">HOTEL</span>
+            <span class="bk-carrier">Kimpton Maa-Lai Bangkok</span>
+          </div>
+          <div class="bk-hotel-dates">
+            <div class="bk-hotel-date">
+              <span class="bk-hotel-label">CHECK-IN</span>
+              <span class="bk-hotel-val">Apr 4, 2026</span>
+              <span class="bk-hotel-sub">3:00 PM</span>
+            </div>
+            <div class="bk-hotel-nights">3<span>nights</span></div>
+            <div class="bk-hotel-date bk-hotel-date--right">
+              <span class="bk-hotel-label">CHECK-OUT</span>
+              <span class="bk-hotel-val">Apr 7, 2026</span>
+              <span class="bk-hotel-sub">12:00 PM</span>
+            </div>
+          </div>
+          <div class="bk-meta">
+            <span class="bk-ref">Conf: #21804343</span>
+            <span class="bk-room">One Bedroom Residence Balcony</span>
+          </div>
+        </div>
+
+        <!-- Flight 2: BKK → HKG -->
+        <div class="booking-card flight-card">
+          <div class="bk-airline">
+            <span class="bk-badge flight-badge">FLIGHT</span>
+            <span class="bk-carrier">HK Express · UO701</span>
+          </div>
+          <div class="bk-route">
+            <div class="bk-airport">
+              <span class="bk-iata" style="color:#F5A623">BKK</span>
+              <span class="bk-city">Bangkok</span>
+              <span class="bk-time">Apr 8 · 16:15</span>
+            </div>
+            <div class="bk-arrow">
+              <div class="bk-line"></div>
+              <span class="bk-plane">✈</span>
+            </div>
+            <div class="bk-airport bk-airport--right">
+              <span class="bk-iata" style="color:#E8003D">HKG</span>
+              <span class="bk-city">Hong Kong</span>
+              <span class="bk-time">Apr 8 · 20:15</span>
+            </div>
+          </div>
+          <div class="bk-meta">
+            <span class="bk-ref">Ref: M6JLMC</span>
+            <span class="bk-pax">Carl + Rachel</span>
+          </div>
+        </div>
+
+        <!-- Flight 3: HKG → SFO (return) -->
+        <div class="booking-card flight-card flight-card--return">
+          <div class="bk-airline">
+            <span class="bk-badge return-badge">RETURN</span>
+            <span class="bk-carrier">United Airlines · UA878</span>
+          </div>
+          <div class="bk-route">
+            <div class="bk-airport">
+              <span class="bk-iata" style="color:#E8003D">HKG</span>
+              <span class="bk-city">Hong Kong</span>
+              <span class="bk-time">Apr 16 · 22:30</span>
+            </div>
+            <div class="bk-arrow">
+              <div class="bk-line"></div>
+              <span class="bk-plane">✈</span>
+            </div>
+            <div class="bk-airport bk-airport--right">
+              <span class="bk-iata">SFO</span>
+              <span class="bk-city">San Francisco</span>
+              <span class="bk-time">Apr 16 · 20:05</span>
+            </div>
+          </div>
+          <div class="bk-meta">
+            <span class="bk-ref">Conf: AKYJL8</span>
+            <span class="bk-pax">Carl + Rachel · Seats 53D / 53E</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANGKOK ===== -->
+  <section class="city-section" id="bangkok" data-city="bangkok" style="--ac:#F5A623">
+    <div class="city-cover">
+      <div class="city-cover-bg bkk-bg"></div>
+      <div class="city-cover-content">
+        <span class="city-num">01</span>
+        <h2 class="city-name">BANGKOK</h2>
+        <p class="city-dates">Apr 4 – Apr 8, 2026</p>
+        <p class="city-tagline">Golden temples, rooftop bars, street chaos.</p>
+      </div>
+    </div>
+
+    <div class="city-body">
+
+      <!-- HOTEL BANNER -->
+      <div class="hotel-banner fi">
+        <div class="hb-left">
+          <span class="hb-eyebrow">Staying at</span>
+          <h3 class="hb-name">Kimpton Maa-Lai Bangkok</h3>
+          <p class="hb-detail">78 Tonson Alley, Lumphini, Bangkok · One Bedroom Residence Balcony</p>
+        </div>
+        <div class="hb-middle">
+          <div class="hb-date-block">
+            <span class="hb-date-label">CHECK-IN</span>
+            <span class="hb-date-val">Apr 4</span>
+            <span class="hb-date-sub">3:00 PM</span>
+          </div>
+          <div class="hb-nights-badge">4<span>nights</span></div>
+          <div class="hb-date-block hb-date-block--right">
+            <span class="hb-date-label">CHECK-OUT</span>
+            <span class="hb-date-val">Apr 8</span>
+            <span class="hb-date-sub">12:00 PM</span>
+          </div>
+        </div>
+        <div class="hb-right">
+          <span class="hb-conf-label">Confirmation</span>
+          <span class="hb-conf-num">#21804343</span>
+        </div>
+      </div>
+
+      <div class="day-tabs" data-city="bangkok">
+        <button class="day-tab active" data-day="1">Apr 4</button>
+        <button class="day-tab" data-day="2">Apr 5</button>
+        <button class="day-tab" data-day="3">Apr 6</button>
+        <button class="day-tab" data-day="4">Apr 7</button>
+        <button class="day-tab" data-day="5">Apr 8</button>
+      </div>
+
+      <!-- DAY 1 — APR 4 · ARRIVE -->
+      <div class="day-content" data-city="bangkok" data-day="1">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">10:20</span><div class="tl-card"><h4>Arrive BKK · Check In</h4><p>Land at Suvarnabhumi (VN601 from SGN). Head to Kimpton Maa-Lai Bangkok in Lumphini — a 30-min taxi from the airport.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">13:00</span><div class="tl-card"><h4>Lunch: Tha Tien Market</h4><p>Riverside stalls near the Grand Palace. Boat noodles, pad see ew, fresh coconut. First proper Thai meal.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:30</span><div class="tl-card"><h4>Grand Palace + Wat Phra Kaew</h4><p>The non-negotiable. Dress code enforced — bring a sarong. Go in the afternoon when morning crowds thin out.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">17:00</span><div class="tl-card"><h4>Wat Pho — Reclining Buddha</h4><p>46-metre golden Buddha, 5 min walk from the Grand Palace. Book a traditional Thai massage on-site.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">18:30</span><div class="tl-card"><h4>Chao Phraya Sunset Cruise</h4><p>River taxi or dinner cruise. Golden hour on the river is unreal after a long-haul flight.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">20:30</span><div class="tl-card"><h4>Sky Bar at Lebua</h4><p>That Hangover Bar. Dress up. ฿800 minimum spend. Worth it for the view on night one.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 2 — APR 5 · SATURDAY -->
+      <div class="day-content hidden" data-city="bangkok" data-day="2">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">08:00</span><div class="tl-card"><h4>Chatuchak Weekend Market</h4><p>Saturday — perfect timing. 8,000+ stalls. Vintage fashion, plants, ceramics, street food. Get there early before the heat.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">12:00</span><div class="tl-card"><h4>Or Tor Kor Market</h4><p>Upscale food market right next to Chatuchak. Best mango sticky rice in Bangkok — don't skip it.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:30</span><div class="tl-card"><h4>Jim Thompson House</h4><p>American silk merchant's Thai-style home. Fascinating murder mystery backstory.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">17:00</span><div class="tl-card"><h4>Siam + CentralWorld</h4><p>Cool down in the malls. Grab a Thai iced tea from a cart outside.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">19:30</span><div class="tl-card"><h4>Dinner: Yaowarat (Chinatown)</h4><p>Bangkok's Chinatown goes hard at night. Seafood, dim sum, crispy pork. Street-level chaos.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">22:00</span><div class="tl-card"><h4>Khao San Road</h4><p>Backpacker central. Dive bars, street grub, people-watching. Go ironically.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 3 — APR 6 · SUNDAY -->
+      <div class="day-content hidden" data-city="bangkok" data-day="3">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">09:00</span><div class="tl-card"><h4>Wat Arun at Dawn</h4><p>Temple of Dawn across the river from Wat Pho. Climb the steep prang for views. Quieter on Sunday mornings.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">11:00</span><div class="tl-card"><h4>Taling Chan Floating Market</h4><p>Less touristy than Damnoen Saduak. Real vendors, real food. Take a longtail boat around the canal. Open Sat–Sun.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:00</span><div class="tl-card"><h4>Lumphini Park</h4><p>Urban green space. Watch monitor lizards stroll around like they own the place.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">16:30</span><div class="tl-card"><h4>Muay Thai at Rajadamnern Stadium</h4><p>Sunday night fights. One of BKK's most authentic cultural experiences. Book ringside seats.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">20:30</span><div class="tl-card"><h4>Late Dinner: Thip Samai</h4><p>Bangkok's most famous pad thai. Queue around the block. Wrap in egg. Non-negotiable.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 4 — APR 7 · LAST FULL DAY -->
+      <div class="day-content hidden" data-city="bangkok" data-day="4">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">10:00</span><div class="tl-card"><h4>Kimpton Hotel Breakfast</h4><p>Last morning with no rush. Use the hotel pool, order room service, or walk to a nearby café in Lumphini.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">12:00</span><div class="tl-card"><h4>Chatuchak (if missed Sat) or Sukhumvit</h4><p>Pick up anything you missed. Nana or Thong Lo area for boutique shops and cafés.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">15:00</span><div class="tl-card"><h4>Traditional Thai Spa</h4><p>Last afternoon — book a 2-hour massage at a proper spa near the hotel. Non-negotiable. You've earned it.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">18:00</span><div class="tl-card"><h4>Asiatique The Riverfront</h4><p>Open-air night bazaar along the Chao Phraya. Ferris wheel, shopping, food. Last Bangkok sunset.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">20:00</span><div class="tl-card"><h4>Farewell Dinner: Paste Bangkok</h4><p>Refined royal Thai cuisine. Book ahead well in advance. One of the best meals of the trip.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 5 — APR 8 · DEPARTURE TO HKG -->
+      <div class="day-content hidden" data-city="bangkok" data-day="5">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">09:00</span><div class="tl-card"><h4>Last Thai Breakfast</h4><p>Jok (rice congee) or khao tom from the hotel or nearby. Final coffee in the lobby.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">12:00</span><div class="tl-card"><h4>Check Out · Kimpton Maa-Lai</h4><p>Store bags if needed. Grab one last Thai iced tea. You've done Bangkok properly.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">13:30</span><div class="tl-card"><h4>Head to Suvarnabhumi Airport</h4><p>Allow 1.5–2 hrs from Lumphini. Taxi or Grab — about 30–45 min depending on traffic.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">16:15</span><div class="tl-card tl-card--flight"><h4>✈ HK Express UO701 · BKK → HKG</h4><p>Departs 16:15 · Arrives HKG 20:15. Confirmation: M6JLMC. Touch down in Hong Kong.</p></div></div>
+        </div>
+      </div>
+
+      <div class="section-head fi"><h3 class="section-title">Must-Hit Spots</h3></div>
+      <div class="spots-grid">
+        <div class="spot-card fi"><div class="spot-icon">🏛️</div><div class="spot-info"><span class="spot-cat">Temple</span><h4>Grand Palace</h4><p>The centrepiece of old Bangkok. Sacred, golden, unmissable.</p></div><a href="https://maps.google.com/?q=Grand+Palace+Bangkok" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🏛️</div><div class="spot-info"><span class="spot-cat">Temple</span><h4>Wat Arun</h4><p>Best viewed at sunset from across the river.</p></div><a href="https://maps.google.com/?q=Wat+Arun+Bangkok" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🛍️</div><div class="spot-info"><span class="spot-cat">Market</span><h4>Chatuchak Weekend Market</h4><p>The world's largest weekend market. Budget half a day.</p></div><a href="https://maps.google.com/?q=Chatuchak+Market+Bangkok" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🌃</div><div class="spot-info"><span class="spot-cat">Nightlife</span><h4>Sky Bar at Lebua</h4><p>Bangkok's iconic open-air rooftop bar. 63rd floor views.</p></div><a href="https://maps.google.com/?q=Sky+Bar+Lebua+Bangkok" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🚤</div><div class="spot-info"><span class="spot-cat">Waterway</span><h4>Chao Phraya River</h4><p>Take the express boat — the best way to see the city.</p></div><a href="https://maps.google.com/?q=Chao+Phraya+River+Bangkok" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🌙</div><div class="spot-info"><span class="spot-cat">Night Market</span><h4>Asiatique The Riverfront</h4><p>Riverside warehouse complex turned night bazaar.</p></div><a href="https://maps.google.com/?q=Asiatique+Bangkok" target="_blank" class="map-link">Maps →</a></div>
+      </div>
+
+      <div class="section-head fi"><h3 class="section-title">Where to Eat</h3></div>
+      <div class="restaurants-grid">
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Street Food</span><span class="vibe-tag">Legendary</span></div><h4>Jay Fai</h4><p class="must-order">Must order: Crab omelette</p><p>Michelin-starred street stall. Queue from 3pm. ~20 seats. Cash only.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Thai</span><span class="vibe-tag">Fine Dining</span></div><h4>Paste Bangkok</h4><p class="must-order">Must order: Tasting menu</p><p>Refined royal Thai cuisine. One of the best in the country.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Seafood</span><span class="vibe-tag">Chaotic &amp; Great</span></div><h4>T&amp;K Seafood (Yaowarat)</h4><p class="must-order">Must order: Grilled tiger prawns</p><p>Classic Chinatown seafood. Plastic chairs, loud, outrageously good.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Thai</span><span class="vibe-tag">Comfort</span></div><h4>Thip Samai</h4><p class="must-order">Must order: Pad Thai wrapped in egg</p><p>Bangkok's most famous pad thai. Queue around the block. Worth it.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Dessert</span><span class="vibe-tag">Classic</span></div><h4>Or Tor Kor Market</h4><p class="must-order">Must order: Mango sticky rice</p><p>Best mango sticky rice in Bangkok. Adjacent to Chatuchak.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Rooftop</span><span class="vibe-tag">Splurge</span></div><h4>Vertigo &amp; Moon Bar</h4><p class="must-order">Must order: Cocktails at sunset</p><p>Open-air rooftop at Banyan Tree. Vertigo-inducing views. Dress code.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HONG KONG ===== -->
+  <section class="city-section" id="hongkong" data-city="hongkong" style="--ac:#E8003D">
+    <div class="city-cover">
+      <div class="city-cover-bg hkg-bg"></div>
+      <div class="city-cover-content">
+        <span class="city-num">02</span>
+        <h2 class="city-name">HONG KONG</h2>
+        <p class="city-dates">Apr 8–12 · Returns Apr 15</p>
+        <p class="city-tagline">Neon harbour, dim sum mornings, mountain trails.</p>
+      </div>
+    </div>
+
+    <div class="city-body">
+
+      <!-- ACCOMMODATION BANNER -->
+      <div class="hotel-banner hotel-banner--home fi">
+        <div class="hb-left">
+          <span class="hb-eyebrow hb-eyebrow--home">Staying with Family</span>
+          <h3 class="hb-name hb-name--hk">Wah Kwai Estate</h3>
+          <p class="hb-detail">Flat 207, Wah Yin House · Wah Kwai Estate · Hong Kong</p>
+        </div>
+        <div class="hb-middle">
+          <div class="hb-date-block">
+            <span class="hb-date-label">FIRST STAY</span>
+            <span class="hb-date-val">Apr 8–12</span>
+            <span class="hb-date-sub">4 nights</span>
+          </div>
+          <div class="hb-nights-badge hb-nights-badge--home">🏠<span>home</span></div>
+          <div class="hb-date-block hb-date-block--right">
+            <span class="hb-date-label">RETURNS</span>
+            <span class="hb-date-val">Apr 15</span>
+            <span class="hb-date-sub">1 night</span>
+          </div>
+        </div>
+        <div class="hb-right">
+          <span class="hb-conf-label">2 pax</span>
+          <span class="hb-conf-num" style="font-family:'Inter',sans-serif;font-size:0.75rem;color:var(--muted)">Carl + Rachel</span>
+        </div>
+      </div>
+
+      <div class="day-tabs" data-city="hongkong">
+        <button class="day-tab active" data-day="1">Apr 8</button>
+        <button class="day-tab" data-day="2">Apr 9</button>
+        <button class="day-tab" data-day="3">Apr 10</button>
+        <button class="day-tab concert-tab" data-day="4">Apr 11 🎵</button>
+        <button class="day-tab" data-day="5">Apr 12</button>
+        <button class="day-tab" data-day="6">Apr 15</button>
+      </div>
+
+      <!-- DAY 1 -->
+      <div class="day-content" data-city="hongkong" data-day="1">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">10:00</span><div class="tl-card"><h4>Arrive &amp; Check In</h4><p>Kowloon or Central hotel. Octopus card from the airport MTR.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">11:30</span><div class="tl-card"><h4>Dim Sum Brunch</h4><p>Tim Ho Wan or Luk Yu Tea House. Har gow, siu mai, egg tarts, char siu bao. Go at opening.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:00</span><div class="tl-card"><h4>Victoria Peak (Peak Tram)</h4><p>Take the historic tram up. Views over the harbour are the postcard image of HK.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">16:30</span><div class="tl-card"><h4>Central &amp; SoHo</h4><p>Mid-Levels escalator. Gallery hop, coffee, boutiques. Wander Sheung Wan for vintage finds.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">19:30</span><div class="tl-card"><h4>Tsim Sha Tsui Waterfront</h4><p>Avenue of Stars at night. Best view of the HK skyline. Symphony of Lights at 8pm.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">21:00</span><div class="tl-card"><h4>Temple Street Night Market</h4><p>Fortune tellers, Cantonese opera, street food. Classic old HK energy.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-content hidden" data-city="hongkong" data-day="2">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">08:00</span><div class="tl-card"><h4>Dragon's Back Hike</h4><p>One of Asia's best urban hikes. 90-min trail, panoramic views of the South China Sea.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">11:30</span><div class="tl-card"><h4>Stanley Market &amp; Waterfront</h4><p>Laid-back beach town on the south side. Browse market, eat at Stanley Plaza.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:30</span><div class="tl-card"><h4>Repulse Bay Beach</h4><p>HK's most popular beach. Good for a swim if weather permits.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">17:30</span><div class="tl-card"><h4>Happy Valley Racecourse</h4><p>Wednesday night races. Cheapest fun in HK. HK$10 entry to the public stand.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">20:00</span><div class="tl-card"><h4>Dinner: Yung Kee or Mott 32</h4><p>Yung Kee for legendary roast goose. Mott 32 for high-design Cantonese. Both iconic.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-content hidden" data-city="hongkong" data-day="3">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">09:00</span><div class="tl-card"><h4>Lantau Island — Big Buddha</h4><p>Ngong Ping 360 cable car. 34-metre bronze Buddha. Vegetarian lunch at Po Lin Monastery.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:00</span><div class="tl-card"><h4>Tai O Fishing Village</h4><p>Stilt houses, dried seafood, pink dolphins (if lucky). Last old village in HK.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">17:00</span><div class="tl-card"><h4>Mong Kok</h4><p>Densest neighbourhood in the world. Ladies Market, Sneaker Street, fish &amp; bird markets.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">20:00</span><div class="tl-card"><h4>Lan Kwai Fong</h4><p>Central's party district. Crowded, loud, fun. International crowd.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 4 — CONCERT DAY APR 11 -->
+      <div class="day-content hidden" data-city="hongkong" data-day="4">
+        <div class="concert-banner fi">
+          <div class="concert-banner-inner">
+            <span class="concert-eyebrow">Apr 11, 2026 · Hong Kong Coliseum · Hung Hom, Kowloon</span>
+            <h3 class="concert-title">盧廣仲 CROWD LU</h3>
+            <p class="concert-sub">Live Concert · Doors Open 12:00 · Show 13:15</p>
+          </div>
+          <div class="concert-time-badge">
+            <span class="ctb-time">13:15</span>
+            <span class="ctb-label">SHOWTIME</span>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">09:30</span><div class="tl-card"><h4>Cha Chaan Teng Breakfast</h4><p>Fuel up properly. Pineapple bun, scrambled egg toast, milk tea. Any local spot in Kowloon side.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">11:00</span><div class="tl-card"><h4>Head to Hung Hom</h4><p>MTR to Hung Hom station — 5-min walk to the Coliseum. Arrive early to beat the queue and grab merch.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">12:00</span><div class="tl-card"><h4>Pre-show Lunch: Hung Hom noodles</h4><p>The streets around Hung Hom are packed with old-school noodle shops. Wonton noodles or beef brisket — keep it light.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">13:15</span><div class="tl-card tl-card--concert"><h4>🎵 CROWD LU — HONG KONG COLISEUM</h4><p>Doors open 12:00. Find your seats, soak it in. One of Taiwan's best live performers. Expect hits, energy, and at least one singalong that wrecks you.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">16:30</span><div class="tl-card"><h4>Post-concert: Float around TST</h4><p>Ride the high. Walk to Tsim Sha Tsui waterfront. Grab a bubble tea. Debrief every song.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">18:30</span><div class="tl-card"><h4>Celebration Dinner</h4><p>Make a reservation somewhere decent — Mott 32 or a classic hotpot spot near Jordan. Tonight calls for a proper meal.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">21:00</span><div class="tl-card"><h4>Night drinks: Kowloon side bars</h4><p>Ozone at ICC, Aqua Spirit in TST, or just a hole-in-the-wall bar in Knutsford Terrace. Cap the night properly.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 5 — APR 12 · DEPART TO SANYA -->
+      <div class="day-content hidden" data-city="hongkong" data-day="5">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">09:00</span><div class="tl-card"><h4>Last HK Morning</h4><p>One final dim sum run or a walk along the harbour. Pack light — beach mode starts today.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">11:00</span><div class="tl-card"><h4>PMQ or Hollywood Road</h4><p>If time allows — PMQ for local designer picks, or Hollywood Road for a final antique browse.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:00</span><div class="tl-card"><h4>Head to Airport</h4><p>Airport Express from Central or Kowloon. Allow 2+ hrs before departure. Flight to Sanya Phoenix (SYX) ~1.5 hrs.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">TBD</span><div class="tl-card"><h4>✈ Fly HKG → SYX</h4><p>Flight details TBD. Arrive Sanya and head straight to the beach hotel. Decompress immediately.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 6 — APR 15 · RETURN NIGHT -->
+      <div class="day-content hidden" data-city="hongkong" data-day="6">
+
+        <!-- RETURN FLIGHT REMINDER -->
+        <div class="return-flight-banner fi">
+          <div class="rfb-left">
+            <span class="rfb-eyebrow">Flying Home Tomorrow</span>
+            <div class="rfb-route">
+              <span class="rfb-iata">HKG</span>
+              <span class="rfb-arrow">✈</span>
+              <span class="rfb-iata">SFO</span>
+            </div>
+            <p class="rfb-carrier">United Airlines · UA878</p>
+          </div>
+          <div class="rfb-middle">
+            <div class="rfb-time-block">
+              <span class="rfb-time-label">DEPARTS</span>
+              <span class="rfb-time">22:30</span>
+              <span class="rfb-date">Apr 16, Wed</span>
+            </div>
+            <div class="rfb-dur">~12h</div>
+            <div class="rfb-time-block rfb-time-block--right">
+              <span class="rfb-time-label">ARRIVES</span>
+              <span class="rfb-time">20:05</span>
+              <span class="rfb-date">Apr 16, Wed</span>
+            </div>
+          </div>
+          <div class="rfb-right">
+            <span class="rfb-detail-label">Confirmation</span>
+            <span class="rfb-detail-val">AKYJL8</span>
+            <span class="rfb-detail-label" style="margin-top:0.4rem">Seats</span>
+            <span class="rfb-detail-val">53D · 53E</span>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">TBD</span><div class="tl-card"><h4>✈ Fly SYX → HKG</h4><p>Flight details TBD. One last look at Sanya's beaches from the plane window.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">TBD</span><div class="tl-card"><h4>Check In: Last Night Hotel</h4><p>Near the airport or Kowloon — keep it simple, you're flying out tomorrow.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">19:00</span><div class="tl-card"><h4>Final HK Dinner</h4><p>That one dish you didn't get to during the first stint. Roast goose at Yung Kee, wonton noodles at Kau Kee, or splurge on a farewell hotpot.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">21:30</span><div class="tl-card"><h4>Night Walk: Kowloon Waterfront</h4><p>Last look at the skyline. Victoria Harbour at night before the long flight home.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">22:30</span><div class="tl-card"><h4>Early Night — UA878 Tomorrow</h4><p>Wheels up at 22:30 on Apr 16. Get decent sleep. It's a 12-hour flight back to SFO.</p></div></div>
+        </div>
+      </div>
+
+      <div class="section-head fi"><h3 class="section-title">Must-Hit Spots</h3></div>
+      <div class="spots-grid">
+        <div class="spot-card fi"><div class="spot-icon">🏔️</div><div class="spot-info"><span class="spot-cat">Viewpoint</span><h4>Victoria Peak</h4><p>Peak Tram up, Lion's Head hike down. The definitive HK skyline shot.</p></div><a href="https://maps.google.com/?q=Victoria+Peak+Hong+Kong" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🚡</div><div class="spot-info"><span class="spot-cat">Island</span><h4>Lantau &amp; Big Buddha</h4><p>Crystal cabin cable car. Views of islands and sea.</p></div><a href="https://maps.google.com/?q=Tian+Tan+Buddha+Hong+Kong" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🌙</div><div class="spot-info"><span class="spot-cat">Night Market</span><h4>Temple Street Night Market</h4><p>Fortune tellers, street food, cheap clothes. Very old HK.</p></div><a href="https://maps.google.com/?q=Temple+Street+Night+Market+Hong+Kong" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🥾</div><div class="spot-info"><span class="spot-cat">Hiking</span><h4>Dragon's Back Trail</h4><p>Best city hike in Asia. 8.5km loop, ocean views throughout.</p></div><a href="https://maps.google.com/?q=Dragon%27s+Back+Trail+Hong+Kong" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🌊</div><div class="spot-info"><span class="spot-cat">Waterfront</span><h4>TST Promenade</h4><p>Night skyline, Symphony of Lights at 8pm, Star Ferry crossing.</p></div><a href="https://maps.google.com/?q=Tsim+Sha+Tsui+Waterfront+Hong+Kong" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🐟</div><div class="spot-info"><span class="spot-cat">Heritage</span><h4>Tai O Fishing Village</h4><p>Stilt houses over tidal channels. Time-warp HK.</p></div><a href="https://maps.google.com/?q=Tai+O+Hong+Kong" target="_blank" class="map-link">Maps →</a></div>
+      </div>
+
+      <div class="section-head fi"><h3 class="section-title">Where to Eat</h3></div>
+      <div class="restaurants-grid">
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Dim Sum</span><span class="vibe-tag">Iconic</span></div><h4>Tim Ho Wan</h4><p class="must-order">Must order: Baked BBQ pork bun</p><p>World's most affordable Michelin-starred dim sum. Go at opening.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Cantonese</span><span class="vibe-tag">Heritage</span></div><h4>Yung Kee Restaurant</h4><p class="must-order">Must order: Roast goose</p><p>70+ years of roast goose. Three floors of loud Cantonese dining. Pure HK.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Cantonese Fusion</span><span class="vibe-tag">Upscale</span></div><h4>Mott 32</h4><p class="must-order">Must order: BBQ Iberico pork</p><p>Jaw-dropping space in a basement vault. Celebrity-chef Cantonese.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Noodles</span><span class="vibe-tag">Classic</span></div><h4>Kau Kee Restaurant</h4><p class="must-order">Must order: Beef brisket noodles</p><p>90-year-old one-dish restaurant. Queue guaranteed. Worth it every time.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Cha Chaan Teng</span><span class="vibe-tag">Local</span></div><h4>Mido Café</h4><p class="must-order">Must order: Pineapple bun + milk tea</p><p>Preserved 1950s HK cafe. Filmed in countless movies.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Rooftop Bar</span><span class="vibe-tag">Splurge</span></div><h4>Ozone Bar (Ritz-Carlton)</h4><p class="must-order">Must order: Signature cocktails</p><p>Highest bar in the world. 118th floor ICC tower. Views to the mainland on clear days.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SANYA ===== -->
+  <section class="city-section" id="sanya" data-city="sanya" style="--ac:#00C9A7">
+    <div class="city-cover">
+      <div class="city-cover-bg sya-bg"></div>
+      <div class="city-cover-content">
+        <span class="city-num">03</span>
+        <h2 class="city-name">SANYA</h2>
+        <p class="city-dates">Apr 12 – Apr 15, 2026</p>
+        <p class="city-tagline">Tropical heat, turquoise water, pure island mode.</p>
+      </div>
+    </div>
+
+    <div class="city-body">
+
+      <!-- ACCOMMODATION BANNER -->
+      <div class="hotel-banner hotel-banner--pending fi">
+        <div class="hb-left">
+          <span class="hb-eyebrow hb-eyebrow--pending">Planned Hotel · Not Booked Yet</span>
+          <h3 class="hb-name hb-name--sanya">The Westin Sanya Haitang Bay Resort</h3>
+          <p class="hb-detail">Haitang Bay, Sanya, Hainan · Luxury beachfront resort</p>
+        </div>
+        <div class="hb-middle">
+          <div class="hb-date-block">
+            <span class="hb-date-label">CHECK-IN</span>
+            <span class="hb-date-val">Apr 12</span>
+          </div>
+          <div class="hb-nights-badge hb-nights-badge--pending">3<span>nights</span></div>
+          <div class="hb-date-block hb-date-block--right">
+            <span class="hb-date-label">CHECK-OUT</span>
+            <span class="hb-date-val">Apr 15</span>
+          </div>
+        </div>
+        <div class="hb-right">
+          <span class="hb-pending-badge">PENDING</span>
+          <span class="hb-conf-label" style="margin-top:0.5rem">Travelling party</span>
+          <span class="hb-conf-num" style="font-family:'Inter',sans-serif;font-size:0.75rem;color:var(--muted);text-align:right">Carl + Rachel<br>+ Carl's parents<br>+ Rachel's parents</span>
+          <span class="hb-conf-label" style="margin-top:0.4rem">6 pax total</span>
+        </div>
+      </div>
+
+      <!-- FLIGHTS PENDING NOTE -->
+      <div class="pending-note fi">
+        <span class="pn-icon">⚠</span>
+        <p>Flights HKG ↔ SYX and hotel not yet booked. 6 travellers total — Carl &amp; Rachel, Carl's parents, Rachel's parents. Coordinate rooms and seats together.</p>
+      </div>
+
+      <div class="day-tabs" data-city="sanya">
+        <button class="day-tab active" data-day="1">Apr 12</button>
+        <button class="day-tab" data-day="2">Apr 13</button>
+        <button class="day-tab" data-day="3">Apr 14</button>
+        <button class="day-tab" data-day="4">Apr 15</button>
+      </div>
+
+      <!-- DAY 1 -->
+      <div class="day-content" data-city="sanya" data-day="1">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">12:00</span><div class="tl-card"><h4>Arrive at Sanya Phoenix International</h4><p>Check into resort. Yalong Bay or Sanya Bay area recommended.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:00</span><div class="tl-card"><h4>Yalong Bay Beach</h4><p>China's answer to the Maldives. White sand, clear water, calm waves. Full decompression mode.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">17:30</span><div class="tl-card"><h4>Sunset Stroll Along the Bay</h4><p>Golden hour on Yalong Bay is elite. Grab a fresh coconut from a cart.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">19:30</span><div class="tl-card"><h4>Dinner: Dadonghai Seafood Strip</h4><p>Pick your own live seafood from tanks. Priced by weight. Go big on the lobster.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-content hidden" data-city="sanya" data-day="2">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">09:00</span><div class="tl-card"><h4>Nanshan Buddhist Cultural Zone</h4><p>108-metre sea Guanyin statue. Buddhism meets the South China Sea. Visually stunning.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">12:30</span><div class="tl-card"><h4>Lunch: Hainanese Cuisine</h4><p>Wenchang chicken rice. Seafood noodles. Cold coconut water. The local holy trinity.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:30</span><div class="tl-card"><h4>Water Sports at Dadonghai</h4><p>Jet ski, banana boat, parasailing. Chaotic but fun.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">17:00</span><div class="tl-card"><h4>Sanya Night Market (解放路)</h4><p>Street food, tropical fruits, pearl shopping, cheap souvenirs.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">20:00</span><div class="tl-card"><h4>Dinner: Resort Restaurant</h4><p>Splurge on the hotel restaurant tonight. Outdoor dining with sea breeze.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-content hidden" data-city="sanya" data-day="3">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">08:00</span><div class="tl-card"><h4>Tianya Haijiao (End of the Earth)</h4><p>Iconic rocky promontory. Historical landmark, dramatic ocean scenery.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">11:00</span><div class="tl-card"><h4>Wuzhizhou Island</h4><p>15-min ferry. Crystal-clear water, diving and snorkelling, secluded beaches. Book in advance.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">14:00</span><div class="tl-card"><h4>Snorkelling on Wuzhizhou</h4><p>Gear rentable on island. Coral reefs, tropical fish. Genuinely impressive visibility.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">17:30</span><div class="tl-card"><h4>Return &amp; Pool Time</h4><p>Back to the resort. Sunset swim. Cocktail hour.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">20:00</span><div class="tl-card"><h4>Last Supper: Fresh Lobster Night</h4><p>Pick from the tanks. Steamed or grilled. Pair with Tsingtao. One last blowout.</p></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 4 — APR 15 · RETURN TO HK -->
+      <div class="day-content hidden" data-city="sanya" data-day="4">
+        <div class="timeline">
+          <div class="tl-item fi"><span class="tl-time">08:00</span><div class="tl-card"><h4>Last Morning Beach Walk</h4><p>Early, before the heat kicks in. One last coconut from a roadside cart. Take it in.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">10:00</span><div class="tl-card"><h4>Haitang Bay Duty-Free (Quick Run)</h4><p>Last chance for tax-free shopping. Chanel, Hermès, LV — significant discount vs mainland prices. Keep it focused.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">13:00</span><div class="tl-card"><h4>Check Out &amp; Head to Airport</h4><p>Sanya Phoenix International (SYX). Flight to HKG TBD — ~1.5 hrs.</p></div></div>
+          <div class="tl-item fi"><span class="tl-time">TBD</span><div class="tl-card"><h4>✈ Fly SYX → HKG</h4><p>Back to Hong Kong for the final night before UA878 takes you home.</p></div></div>
+        </div>
+      </div>
+
+      <div class="section-head fi"><h3 class="section-title">Must-Hit Spots</h3></div>
+      <div class="spots-grid">
+        <div class="spot-card fi"><div class="spot-icon">🏖️</div><div class="spot-info"><span class="spot-cat">Beach</span><h4>Yalong Bay</h4><p>The best beach in mainland China. White sand, calm turquoise water.</p></div><a href="https://maps.google.com/?q=Yalong+Bay+Sanya" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🛥️</div><div class="spot-info"><span class="spot-cat">Island</span><h4>Wuzhizhou Island</h4><p>Best snorkelling near Sanya. 15-min ferry from the mainland.</p></div><a href="https://maps.google.com/?q=Wuzhizhou+Island+Sanya" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🗿</div><div class="spot-info"><span class="spot-cat">Cultural</span><h4>Tianya Haijiao</h4><p>"End of the Earth" — dramatic rock formations and ocean panoramas.</p></div><a href="https://maps.google.com/?q=Tianya+Haijiao+Sanya" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🙏</div><div class="spot-info"><span class="spot-cat">Landmark</span><h4>Nanshan Buddhist Zone</h4><p>108-metre sea Guanyin. Powerful location, striking architecture.</p></div><a href="https://maps.google.com/?q=Nanshan+Sanya" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🤿</div><div class="spot-info"><span class="spot-cat">Water Sports</span><h4>Dadonghai Beach</h4><p>Main activity beach. Jet ski, parasailing, banana boats.</p></div><a href="https://maps.google.com/?q=Dadonghai+Beach+Sanya" target="_blank" class="map-link">Maps →</a></div>
+        <div class="spot-card fi"><div class="spot-icon">🛍️</div><div class="spot-info"><span class="spot-cat">Shopping</span><h4>Haitang Bay Duty-Free</h4><p>Tax-free luxury goods. Big savings vs mainland prices.</p></div><a href="https://maps.google.com/?q=Haitang+Bay+International+Shopping+Centre+Sanya" target="_blank" class="map-link">Maps →</a></div>
+      </div>
+
+      <div class="section-head fi"><h3 class="section-title">Where to Eat</h3></div>
+      <div class="restaurants-grid">
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Seafood</span><span class="vibe-tag">Pick Your Own</span></div><h4>Dadonghai Seafood Street</h4><p class="must-order">Must order: Live lobster, garlic crab</p><p>Walk the tanks, negotiate, they cook it. Classic Sanya experience.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Hainanese</span><span class="vibe-tag">Local</span></div><h4>Wenchang Chicken Rice</h4><p class="must-order">Must order: Wenchang chicken + rice</p><p>The original Hainanese chicken rice. Tender poached chicken, fragrant rice.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Tropical Fruit</span><span class="vibe-tag">Street Food</span></div><h4>Jiefang Lu Night Market</h4><p class="must-order">Must order: Dragon fruit, coconut milk</p><p>Fresh tropical fruits cut to order. Dirt cheap. Try everything.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Resort Dining</span><span class="vibe-tag">Atmosphere</span></div><h4>Yalong Bay Resort Restaurants</h4><p class="must-order">Must order: Fresh catch of the day</p><p>Most 5-star resorts have great open-air sea view restaurants. Worth it once.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Chinese BBQ</span><span class="vibe-tag">Night Eats</span></div><h4>Sanya Night Barbecue</h4><p class="must-order">Must order: Grilled squid, lamb skewers</p><p>Street BBQ near Sanya Bay. Cold beer, plastic tables, perfect tropical night vibes.</p></div>
+        <div class="rest-card fi"><div class="rest-top"><span class="cuisine-tag">Coconut Desserts</span><span class="vibe-tag">Must Try</span></div><h4>Coconut Specialties</h4><p class="must-order">Must order: Coconut milk pudding</p><p>Hainan is famous for coconut. Coconut coffee, jelly, rice — try them all.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-stats">
+      <div class="stat"><span class="stat-n">3</span><span class="stat-l">Cities</span></div>
+      <span class="stat-div">·</span>
+      <div class="stat"><span class="stat-n">10</span><span class="stat-l">Days</span></div>
+      <span class="stat-div">·</span>
+      <div class="stat"><span class="stat-n">18+</span><span class="stat-l">Spots</span></div>
+      <span class="stat-div">·</span>
+      <div class="stat"><span class="stat-n">18+</span><span class="stat-l">Restaurants</span></div>
+    </div>
+    <p class="footer-credit">Built for the trip · Mar – Apr 2026</p>
+    <div class="footer-cities">
+      <span style="color:#F5A623">BKK</span>
+      <span class="footer-dot">·</span>
+      <span style="color:#E8003D">HKG</span>
+      <span class="footer-dot">·</span>
+      <span style="color:#00C9A7">SYX</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
