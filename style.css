@@ -1115,6 +1115,31 @@ body {
   gap: 1rem;
 }
 
+/* ===== EXPAND / COLLAPSE ===== */
+.rest-extra { display: none; }
+.restaurants-grid.expanded .rest-extra { display: block; }
+
+.expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 2.5rem;
+  padding: 0.55rem 1.1rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.expand-btn:hover { border-color: var(--ac); color: var(--ac); }
+.expand-btn .expand-icon { transition: transform 0.3s ease; display: inline-block; }
+.expand-btn.open .expand-icon { transform: rotate(180deg); }
+
 .rest-card {
   padding: 1.2rem;
   background: var(--card);

@@ -110,6 +110,22 @@ const sectionIO = new IntersectionObserver(entries => {
 
 citySections.forEach(s => sectionIO.observe(s));
 
+// ===== EXPAND / COLLAPSE RESTAURANT GRIDS =====
+document.querySelectorAll('.expand-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const grid = document.getElementById(btn.dataset.target);
+    const isOpen = grid.classList.toggle('expanded');
+    btn.classList.toggle('open', isOpen);
+    btn.querySelector('.expand-label').textContent = isOpen ? 'Show fewer' : 'Show all saved places';
+    if (isOpen) {
+      grid.querySelectorAll('.rest-extra:not(.visible)').forEach((el, i) => {
+        el.style.transitionDelay = `${i * 0.06}s`;
+        requestAnimationFrame(() => el.classList.add('visible'));
+      });
+    }
+  });
+});
+
 // ===== HERO CITY CYCLING =====
 const cycleEl = document.querySelector('.city-cycle');
 if (cycleEl) {
